@@ -135,3 +135,45 @@ MonoBehaviour:
       id: 0
       description: None
       axisConstraint: 0
+  - localizationKey: 
+    keyword: Create Cube
+    keyCode: 0
+    action:
+      id: 0
+      description: None
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Create Sphere
+    keyCode: 0
+    action:
+      id: 0
+      description: None
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Create Cylinder
+    keyCode: 0
+    action:
+      id: 0
+      description: None
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Create Capsule
+    keyCode: 0
+    action:
+      id: 0
+      description: None
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Create Cone
+    keyCode: 0
+    action:
+      id: 0
+      description: None
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Create Ring
+    keyCode: 0
+    action:
+      id: 0
+      description: None
+      axisConstraint: 0
