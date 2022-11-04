@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 384761796653253326}
   - component: {fileID: 384761796653253329}
   - component: {fileID: 384761796653253328}
+  - component: {fileID: 3814112529072791398}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 384761796653253334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.2, y: 0.1, z: 0.5}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 9146568325057371597}
   m_Father: {fileID: 0}
@@ -125,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 181cd563a8349c34ea8978b0bc8d9c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hostTransform: {fileID: 0}
+  hostTransform: {fileID: 384761796653253330}
   manipulationType: 3
   twoHandedManipulationType: 7
   allowFarManipulation: 1
@@ -142,7 +143,7 @@ MonoBehaviour:
   rotateLerpTime: 0.001
   scaleLerpTime: 0.001
   enableConstraints: 1
-  constraintsManager: {fileID: 0}
+  constraintsManager: {fileID: 384761796653253326}
   elasticsManager: {fileID: 0}
   onManipulationStarted:
     m_PersistentCalls:
@@ -170,6 +171,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTetherWhenManipulating: 0
   IsBoundsHandles: 0
+--- !u!114 &3814112529072791398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384761796653253334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d753f9c54a1f4408f15034f757b977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threeDCanvas: {fileID: 384761796653253334}
 --- !u!1 &9102962919434999102
 GameObject:
   m_ObjectHideFlags: 0

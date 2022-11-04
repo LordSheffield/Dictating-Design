@@ -35,5 +35,14 @@ public class SpawnShapes : MonoBehaviour
     {
         Instantiate(cone, transform.position, Quaternion.identity);
     }
+
+    //void Update()
+    //{
+        //if (Input.GetKeyDown(KeyCode.J))
+        //{
+            //CreateCone();
+        //}
+
+    //}
 }
 
