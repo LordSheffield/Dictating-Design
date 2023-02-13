@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Microsoft.MixedReality.Toolkit.Input;
+using Microsoft.MixedReality.Toolkit.Utilities;
+using UnityEngine.Events;
+using Microsoft.MixedReality.Toolkit;
 public class ColorChange : MonoBehaviour
 {
+
     public GameObject threeDCanvas;
-    /*
+    private IMixedRealityEyeGazeProvider EyeTrackingProvider => eyeTrackingProvider ?? (eyeTrackingProvider = CoreServices.InputSystem?.EyeGazeProvider);
+    private IMixedRealityEyeGazeProvider eyeTrackingProvider = null;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
@@ -16,26 +22,39 @@ public class ColorChange : MonoBehaviour
             // Call SetColor using the shader property name "_Color" and setting the color to red
             cubeRenderer.material.SetColor("_Color", Color.red);
         }
-        
-    */
+    }
 
     public void turnRed()
     {
-        var cubeRenderer = threeDCanvas.GetComponent<Renderer>();
+        if (EyeTrackingProvider?.GazeTarget == gameObject)
+        {
+            var cubeRenderer = threeDCanvas.GetComponent<Renderer>();
 
-        cubeRenderer.material.SetColor("_Color", Color.red);
+            cubeRenderer.material.SetColor("_Color", Color.red);
+        }
+        
     }
     public void turnBlue()
     {
-        var cubeRenderer = threeDCanvas.GetComponent<Renderer>();
+        if (EyeTrackingProvider?.GazeTarget == gameObject)
+        {
+            var cubeRenderer = threeDCanvas.GetComponent<Renderer>();
 
-        cubeRenderer.material.SetColor("_Color", Color.blue);
+            cubeRenderer.material.SetColor("_Color", Color.blue);
+        }
+        
     }
     public void turnGreen()
     {
-        var cubeRenderer = threeDCanvas.GetComponent<Renderer>();
+        if (EyeTrackingProvider?.GazeTarget == gameObject)
+        {
+            var cubeRenderer = threeDCanvas.GetComponent<Renderer>();
 
-        cubeRenderer.material.SetColor("_Color", Color.green);
+            cubeRenderer.material.SetColor("_Color", Color.green);
+        }
+    
     }
+
+
 }
 

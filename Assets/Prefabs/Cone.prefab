@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6383651729088526195}
   - component: {fileID: 1548050530074209879}
   - component: {fileID: -5894462535187725467}
+  - component: {fileID: -1815965905087654975}
   m_Layer: 0
   m_Name: Cone
   m_TagString: Untagged
@@ -183,3 +184,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   threeDCanvas: {fileID: 8373193717416482447}
+--- !u!114 &-1815965905087654975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8373193717416482447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e6657bab90ac149872e5361b42ea62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectAction:
+    id: 14
+    description: Toggle Diagnostics
+    axisConstraint: 0
+  voiceSelect: []
+  dwellTimeInSec: 0.8
+  onLookAtStart:
+    m_PersistentCalls:
+      m_Calls: []
+  whileLookingAtTarget:
+    m_PersistentCalls:
+      m_Calls: []
+  onLookAway:
+    m_PersistentCalls:
+      m_Calls: []
+  onDwell:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelected:
+    m_PersistentCalls:
+      m_Calls: []
+  onTapDown:
+    m_PersistentCalls:
+      m_Calls: []
+  onTapUp:
+    m_PersistentCalls:
+      m_Calls: []
+  eyeCursorSnapToTargetCenter: 0
