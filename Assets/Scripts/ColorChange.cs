@@ -9,8 +9,13 @@ public class ColorChange : MonoBehaviour
 {
 
     public GameObject threeDCanvas;
-    private IMixedRealityEyeGazeProvider EyeTrackingProvider => eyeTrackingProvider ?? (eyeTrackingProvider = CoreServices.InputSystem?.EyeGazeProvider);
-    private IMixedRealityEyeGazeProvider eyeTrackingProvider = null;
+
+    private EyeTrackingTarget myEyeTrackingTarget = null;
+
+    private void Start()
+    {
+        myEyeTrackingTarget = this.GetComponent<EyeTrackingTarget>();
+    }
 
     void Update()
     {
@@ -25,34 +30,54 @@ public class ColorChange : MonoBehaviour
     }
 
     public void turnRed()
-    {
-        if (EyeTrackingProvider?.GazeTarget == gameObject)
-        {
-            var cubeRenderer = threeDCanvas.GetComponent<Renderer>();
+    {       
+        var cubeRenderer = threeDCanvas.GetComponent<Renderer>();
 
-            cubeRenderer.material.SetColor("_Color", Color.red);
-        }
+        cubeRenderer.material.SetColor("_Color", Color.red);
+        
         
     }
     public void turnBlue()
-    {
-        if (EyeTrackingProvider?.GazeTarget == gameObject)
-        {
-            var cubeRenderer = threeDCanvas.GetComponent<Renderer>();
+    {         
+        var cubeRenderer = threeDCanvas.GetComponent<Renderer>();
 
-            cubeRenderer.material.SetColor("_Color", Color.blue);
-        }
-        
+        cubeRenderer.material.SetColor("_Color", Color.blue);
+              
     }
     public void turnGreen()
-    {
-        if (EyeTrackingProvider?.GazeTarget == gameObject)
-        {
-            var cubeRenderer = threeDCanvas.GetComponent<Renderer>();
+    {       
+        var cubeRenderer = threeDCanvas.GetComponent<Renderer>();
 
-            cubeRenderer.material.SetColor("_Color", Color.green);
-        }
-    
+        cubeRenderer.material.SetColor("_Color", Color.green);
+          
+    }
+    public void turnYellow()
+    {
+        var cubeRenderer = threeDCanvas.GetComponent<Renderer>();
+
+        cubeRenderer.material.SetColor("_Color", Color.yellow);
+
+    }
+    public void turnBlack()
+    {
+        var cubeRenderer = threeDCanvas.GetComponent<Renderer>();
+
+        cubeRenderer.material.SetColor("_Color", Color.black);
+
+    }
+    public void turnGray()
+    {
+        var cubeRenderer = threeDCanvas.GetComponent<Renderer>();
+
+        cubeRenderer.material.SetColor("_Color", Color.gray);
+
+    }
+    public void turnWhite()
+    {
+        var cubeRenderer = threeDCanvas.GetComponent<Renderer>();
+
+        cubeRenderer.material.SetColor("_Color", Color.white);
+
     }
 
 

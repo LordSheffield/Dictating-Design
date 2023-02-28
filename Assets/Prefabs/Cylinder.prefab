@@ -17,7 +17,8 @@ GameObject:
   - component: {fileID: 7023510855940682914}
   - component: {fileID: 3974444637266212282}
   - component: {fileID: 1993887765428312476}
-  - component: {fileID: 2233724476678515392}
+  - component: {fileID: 4897307151836426577}
+  - component: {fileID: -9140159940398260976}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -199,9 +200,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectAction:
-    id: 14
-    description: Toggle Diagnostics
-    axisConstraint: 0
+    id: 1
+    description: Select
+    axisConstraint: 2
   voiceSelect:
   - id: 1
     description: Select
@@ -212,19 +213,7 @@ MonoBehaviour:
       m_Calls: []
   whileLookingAtTarget:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7023510855940682924}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onLookAway:
     m_PersistentCalls:
       m_Calls: []
@@ -241,7 +230,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   eyeCursorSnapToTargetCenter: 0
---- !u!114 &2233724476678515392
+--- !u!114 &4897307151836426577
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -250,74 +239,262 @@ MonoBehaviour:
   m_GameObject: {fileID: 7023510855940682924}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Script: {fileID: 11500000, guid: 45b3eff181cc4244a8a14234096e62fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  states: {fileID: 11400000, guid: 5eac1712038236e4b8ffdb3893804fe1, type: 2}
-  InputActionId: 0
-  isGlobal: 0
-  Dimensions: 1
-  dimensionIndex: 0
-  startDimensionIndex: 0
-  CanSelect: 1
-  CanDeselect: 1
-  voiceCommand: 
-  voiceRequiresFocus: 1
-  profiles:
-  - Target: {fileID: 7023510855940682924}
-    Themes:
-    - {fileID: 11400000, guid: 37d9cf015794a7d45b2de9368e692173, type: 2}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-  Events:
-  - Event:
+  isFocusRequired: 1
+  keywords:
+  - keyword: Turn Blue
+    response:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: 
+        - m_Target: {fileID: 3974444637266212282}
+          m_TargetAssemblyTypeName: ColorChange, Assembly-CSharp
+          m_MethodName: turnBlue
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    ClassName: InteractableOnFocusReceiver
-    AssemblyQualifiedName: Microsoft.MixedReality.Toolkit.UI.InteractableOnFocusReceiver,
-      Microsoft.MixedReality.Toolkit.SDK, Version=2.8.3.0, Culture=neutral, PublicKeyToken=null
-    Settings:
-    - Type: 18
-      Label: On Focus Off
-      Name: OnFocusOff
-      Tooltip: Focus has left the object
-      IntValue: 0
-      StringValue: 
-      FloatValue: 0
-      BoolValue: 0
-      GameObjectValue: {fileID: 0}
-      ScriptableObjectValue: {fileID: 0}
-      ObjectValue: {fileID: 0}
-      MaterialValue: {fileID: 0}
-      TextureValue: {fileID: 0}
-      ColorValue: {r: 0, g: 0, b: 0, a: 0}
-      Vector2Value: {x: 0, y: 0}
-      Vector3Value: {x: 0, y: 0, z: 0}
-      Vector4Value: {x: 0, y: 0, z: 0, w: 0}
-      CurveValue:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-      AudioClipValue: {fileID: 0}
-      QuaternionValue: {x: 0, y: 0, z: 0, w: 0}
-      EventValue:
-        m_PersistentCalls:
-          m_Calls: []
-      Options: []
-  resetOnDestroy: 0
-  enabledOnStart: 1
+  - keyword: Turn Green
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3974444637266212282}
+          m_TargetAssemblyTypeName: ColorChange, Assembly-CSharp
+          m_MethodName: turnGreen
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Turn Red
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3974444637266212282}
+          m_TargetAssemblyTypeName: ColorChange, Assembly-CSharp
+          m_MethodName: turnRed
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Bigger
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -9140159940398260976}
+          m_TargetAssemblyTypeName: VoiceCommands, Assembly-CSharp
+          m_MethodName: Bigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Smaller
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -9140159940398260976}
+          m_TargetAssemblyTypeName: VoiceCommands, Assembly-CSharp
+          m_MethodName: Smaller
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Taller
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -9140159940398260976}
+          m_TargetAssemblyTypeName: VoiceCommands, Assembly-CSharp
+          m_MethodName: IncreaseY
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Longer
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -9140159940398260976}
+          m_TargetAssemblyTypeName: VoiceCommands, Assembly-CSharp
+          m_MethodName: IncreaseZ
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Thicker
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -9140159940398260976}
+          m_TargetAssemblyTypeName: VoiceCommands, Assembly-CSharp
+          m_MethodName: IncreaseX
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Shorter
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -9140159940398260976}
+          m_TargetAssemblyTypeName: VoiceCommands, Assembly-CSharp
+          m_MethodName: DecreaseY
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Lesser
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -9140159940398260976}
+          m_TargetAssemblyTypeName: VoiceCommands, Assembly-CSharp
+          m_MethodName: DecreaseZ
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Thinner
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -9140159940398260976}
+          m_TargetAssemblyTypeName: VoiceCommands, Assembly-CSharp
+          m_MethodName: DecreaseX
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Turn Yellow
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3974444637266212282}
+          m_TargetAssemblyTypeName: ColorChange, Assembly-CSharp
+          m_MethodName: turnYellow
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Turn Black
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3974444637266212282}
+          m_TargetAssemblyTypeName: ColorChange, Assembly-CSharp
+          m_MethodName: turnBlack
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Turn Gray
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3974444637266212282}
+          m_TargetAssemblyTypeName: ColorChange, Assembly-CSharp
+          m_MethodName: turnGray
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Turn White
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3974444637266212282}
+          m_TargetAssemblyTypeName: ColorChange, Assembly-CSharp
+          m_MethodName: turnWhite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  persistentKeywords: 0
+  speechConfirmationTooltipPrefab: {fileID: 8046114618238072051, guid: 271778f6c957b524981067a81d238394, type: 3}
+--- !u!114 &-9140159940398260976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7023510855940682924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b44bd2d9acade49bb4f552f918ee86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
