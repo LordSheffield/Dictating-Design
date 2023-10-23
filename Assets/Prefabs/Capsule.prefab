@@ -362,7 +362,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: -2056375878321966837}
           m_TargetAssemblyTypeName: VoiceCommands, Assembly-CSharp
-          m_MethodName: IncreaseY
+          m_MethodName: IncreaseX
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
